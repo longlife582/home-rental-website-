@@ -1,0 +1,103 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  /* max-width: 100vw; */
+}
+
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 60vw;
+  
+}
+
+nav svg{
+    /* background-color: aqua; */
+    position: relative;
+/* width: 147px; */
+/* height: 50px; */
+left: 120px;
+top: 19px;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: space-between;
+  width: 30vw;
+}
+
+li {
+position: relative;
+  /* width: 51px; */
+  /* height: 13px; */
+  left: 203px;
+  top: 30px;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 70.19%;
+  list-style-type: none;
+  color: #FFFFFF;
+}
+
+.herosection{
+    display: flex;
+    align-items: center;
+    background-image: url(./images/hersection\ bg.png);
+    background-position: center;
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    height: 100vh;
+    margin-top: -90px;
+    /* background-image: ; */
+    /* width: 80vw; */
+    /* justify-content: space-between; */
+}
+
+.text{
+    position: relative;
+    /* width: 584px; */
+    width: 28%;
+    height: 20%;
+left: 220px;
+top: -90px;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 22px;
+line-height: 70px;
+letter-spacing: -1px;
+text-transform: capitalize;
+color: #FFFFFF;
+
+
+}
+
+.image{
+    position: relative;
+width: 408px;
+height: 340px;
+left: 550px;
+top: -90px;
+/* box-shadow: 0px 0px 18px 3px rgba(0, 0, 0, 0.25); */
+border-radius: 15px;
+}
+
+
+
+

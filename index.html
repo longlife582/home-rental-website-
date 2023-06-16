@@ -228,23 +228,29 @@
           Out!
         </p>
 
-        <form action="">
+        <form action="" id="form">
           <h1>Add A New Property</h1>
           <label for="address" class="address">Address *</label><br />
           <input
             type="text"
             placeholder="Enter Address"
-            required
             id="address"
+            required
           /><br />
           <label for="">Room Type *</label><br />
-          <select name="" id="Rooms">
-            <option value="" disabled selected>Select Room Type</option>
-            <option value="">Private Room</option>
-            <option value="">Public Room</option></select
-          ><br />
+          <input type="text" placeholder="Roomtype" id="rooms" />
+          <br />
           <label for="Price " class="price">Price *</label><br />
-          <input type="number" placeholder="Enter Price" id="Price" /><br />
+          <input
+            type="text"
+            placeholder="Enter Price"
+            id="Price"
+            required
+          /><br />
+
+          <label for="img">Select image:</label><br />
+          <input type="file" id="img" name="img" accept="image/*" /><br />
+
           <label for="Description ">Description *</label><br />
           <textarea
             name=""
@@ -252,9 +258,10 @@
             cols="30"
             rows="10"
             placeholder="Enter Description"
+            required
           ></textarea
           ><br />
-          <button id="btn">Add New Property</button>
+          <button type="submit" class="btn">Add New Property</button>
         </form>
       </div>
 
@@ -347,5 +354,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="index.js"></script>
   </body>
 </html>

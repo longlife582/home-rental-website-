@@ -4,50 +4,54 @@ const price = document.getElementById("Price");
 const rooms = document.getElementById("rooms");
 const btn = document.querySelector(".btn");
 const property = document.querySelector(".property");
-const imgInput = document.querySelector("#img");
-
-// btn.addEventListener("click", (e) => {
-//   e.preventDefault();
-//   const inputValue = addressInput.value;
-//   console.log(inputValue);
-//   console.log(price.value);
-//   console.log(rooms.value);
-
-// });
-
-// console.log(rooms)
-
-// btn.addEventListener("click", (e) => {
-//   e.preventDefault();
-
-//   if (addressInput.value && price.value) {
-//     let item = {
-//       address: addressInput.value,
-//       price: price.value,
-//       roomss: rooms.value,
-//     };
-//     console.log(item);
-//   } else {
-//     alert("plase fill");
-//   }
-
-// });
-// console.log(imgInput);
+const description = document.querySelector("#des");
 
 btn.addEventListener("click", function (e) {
   e.preventDefault();
 
-  if (!addressInput.value || !price.value || !rooms.value) {
+  if (
+    !addressInput.value ||
+    !price.value ||
+    !rooms.value ||
+    !description.value
+  ) {
     alert("Please fill in all fields.");
     return;
   }
 
-  const newDiv = document.createElement("div");
-  newDiv.setAttribute("id", "card");
+  const items = {
+    address: addressInput.value,
+    price: price.value,
+    room_type: rooms.value,
+    description: description.value,
+  };
 
-  const img = document.createElement("img");
-  img.src = imgInput.value;
-  newDiv.appendChild(img);
+  fetch("http://localhost:5000/add", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(items),
+  }).then((response) => {
+    if (response.ok) alert("your property have been added");
+    return response.json();
+  });
+
+  const newDiv = document.createElement("div");
+  newDiv.className = "top1";
+  var fileInput = document.getElementById("img");
+  var file = fileInput.files[0];
+
+  var reader = new FileReader();
+  reader.onload = function (e) {
+    var img = document.createElement("img");
+    img.src = e.target.result;
+    img.style.borderTopLeftRadius = "15px";
+    img.style.borderTopRightRadius = "15px";
+
+    newDiv.appendChild(img);
+    newDiv.insertBefore(img, newDiv.firstChild);
+  };
 
   const h4 = document.createElement("h4");
   const h4Text = document.createTextNode(addressInput.value);
@@ -63,8 +67,8 @@ btn.addEventListener("click", function (e) {
   const h6text = document.createTextNode(price.value);
   h6.appendChild(h6text);
   newDiv.appendChild(h6);
+  property.appendChild(newDiv);
 
   form.reset();
-
-  console.log(newDiv);
+  reader.readAsDataURL(file);
 });

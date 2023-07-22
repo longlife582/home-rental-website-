@@ -26,18 +26,7 @@ app.use(
   })
 );
 
-// app.post("/", (req, res) => {
-//   const { first_name, last_name } = req.body;
 
-//   try {
-//     if (!first_name) throw Error("insect your first name");
-//     res.status(200).json({
-//       message: `your request have been recorder`,
-//     });
-//   } catch (error) {
-//     res.status(404).json({ error: error.message });
-//   }
-// });
 
 app.post("/add", async (req, res) => {
   const { address, price, room_type, description } = req.body;
@@ -59,27 +48,7 @@ app.post("/add", async (req, res) => {
   }
 });
 
-app.get("/getALLPRO/:id", async (req, res) => {
-  const { id } = req.params;
-  try {
-    let sql = `SELECT * FROM properties WHERE id = '${id}'`;
-    const [item] = await db.execute(sql);
 
-    res.status(200).json({ item });
-  } catch (error) {
-    res.status(400).json({ error: error.message });
-  }
-});
-
-app.get("/getALL", async (req, res) => {
-  try {
-    let sql = `SELECT * FROM properties`;
-    const item = await db.execute(sql);
-    res.status(200).json({ item });
-  } catch (error) {
-    res.status(400).json({ error: error.message });
-  }
-});
 
 // add your listen port
 app.listen(PORT, () => {

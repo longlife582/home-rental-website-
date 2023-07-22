@@ -647,23 +647,24 @@ li {
   flex-direction: column;
   align-items: center;
   height: 100vh;
-  margin-top: 60px;
-  margin-bottom: 90px;
+  width: 100%;
+  margin-top: 100px;
+  padding-top: 50px;
+  /* margin-bottom: 90px; */
 }
 
 form {
   position: relative;
   display: flex;
   align-items: center;
+  flex-direction: column;
   /* left: 100px; */
   top: 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
   width: 50%;
   background: #ffffff;
   box-shadow: 0px 4px 63px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
+  /* height: 70%; */
 }
 
 .formtext {
@@ -695,18 +696,19 @@ label {
   line-height: 24px;
   letter-spacing: 0.2px;
   color: #252b42;
-  left: -197px;
+  left: -187px;
   top: 13px;
 }
 
 input {
   box-sizing: border-box;
-  width: 60%;
+  width: 70%;
   height: 10%;
   background: #f9f9f9;
   border: 1px solid #e6e6e6;
   border-radius: 5px;
   position: relative;
+  outline: none;
   /* left: 100px; */
 }
 select {
@@ -718,18 +720,20 @@ select {
 
 textarea {
   resize: none;
-  width: 60%;
+  width: 70%;
   height: 150px;
+  outline: none;
 }
 
 form button {
   position: relative;
   width: 413px;
+  /* padding: 30px 30px; */
   height: 69.01px;
   margin-bottom: 20px;
   color: white;
   border: none;
-  left: 30px;
+  /* left: 30px; */
   background: #f4511e;
   border-radius: 9.07965px;
   font-family: "Inter";
@@ -740,9 +744,7 @@ form button {
   letter-spacing: 0.181593px;
   transition: 0.2s;
 }
-form button:hover {
-  transform: scale(1.1);
-}
+
 
 .price {
   margin-left: -50px;
@@ -757,20 +759,26 @@ form button:hover {
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  top: 300px;
   position: relative;
   /* height: 80vh; */
   background: rgba(244, 81, 30, 0.07);
 }
 
-/* .video {
-  /* width: 638px; */
-  /* height: 590px; */
+.imggg{
+  width: 100%;
+}
+.imggg img{
+  width: 100%;
+}
+
 
 
 .lastright {
   display: flex;
   flex-direction: column;
 }
+
 .lastright svg {
   opacity: 0.233;
 }
@@ -780,9 +788,9 @@ form button:hover {
   /* width: 635px; */
   height: 216px;
   /* left: 129px; */
-  top: -50px;
-  padding-left: 10px;
-
+  /* top: -50px; */
+  padding-left: 60px;
+padding-right: 60px;
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
@@ -832,6 +840,8 @@ form button:hover {
 
 footer {
   height: 70vh;
+  position: relative;
+  top: 200px;
 }
 
 footer svg {

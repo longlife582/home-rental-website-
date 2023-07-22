@@ -17,6 +17,8 @@ btn.addEventListener("click", function (e) {
   ) {
     alert("Please fill in all fields.");
     return;
+  }else{
+    alert("property added")
   }
 
   const items = {
